@@ -5,12 +5,10 @@ jobs:
       name: K6 Load test
       runs-on: ubuntu-latest
       steps:
-      - name: step 1 - checkout
-        uses: actions/checkout@v3
-
-      - name: step 2 - run k6 load test
-        uses: grafana/k6-action@v3
-        with:
-          filename: MaoNaMassa/git/github.js
+        - uses: actions/checkout@v2
+        - uses: grafana/setup-k6-action@v1
+        - uses: grafana/run-k6-action@v1
+          with:
+            path: ./MaoNaMassa/git/github.js
 
       
