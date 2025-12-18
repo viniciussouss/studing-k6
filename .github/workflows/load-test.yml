@@ -5,15 +5,23 @@ jobs:
       name: K6 Load test
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout repository
+        - name: 01. Checkout repository
           uses: actions/checkout@v2
 
-        - name: Setup k6
+        - name: 02. Setup k6
           uses: grafana/setup-k6-action@v1
         
-        - name: Run k6 Testing
+        - name: 03. Run k6 Testing
           uses: grafana/run-k6-action@v1
           with:
             path: ./MaoNaMassa/cloud/git/github.js
+
+        - run: ls & mkdir report & mv index.html report 
+          
+        - name: 04. Upload k6 report artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: k6-report
+            path: report
 
       
