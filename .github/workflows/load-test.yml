@@ -1,5 +1,7 @@
 name: K6 load test
 on: [push]
+permissions:
+  contents: write
 jobs: 
     build: 
       name: K6 Load test
