@@ -24,4 +24,11 @@ jobs:
             name: k6-report
             path: report
 
+        - name: 05. Upload k6 report to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: pages
+            publish_dir: ./report
+
       
