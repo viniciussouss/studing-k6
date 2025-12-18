@@ -1,0 +1,36 @@
+name: K6 load test
+on: [push]
+permissions:
+  contents: write
+jobs: 
+    build: 
+      name: K6 Load test
+      runs-on: ubuntu-latest
+      steps:
+        - name: 01. Checkout repository
+          uses: actions/checkout@v2
+
+        - name: 02. Setup k6
+          uses: grafana/setup-k6-action@v1
+        
+        - name: 03. Run k6 Testing
+          uses: grafana/run-k6-action@v1
+          with:
+            path: ./practice/cloud/git/github.js
+
+        - run: ls & mkdir report & mv index.html report 
+          
+        - name: 04. Upload k6 report artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: k6-report
+            path: report
+
+        - name: 05. Upload k6 report to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: gh-pages
+            publish_dir: ./report
+
+      

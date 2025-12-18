@@ -1,4 +1,4 @@
-[Módulo] K6 
+[Módulo] Introdução
 
 Diferentes tipos de testes: 
 
@@ -10,7 +10,7 @@ Load Testing é o principal, porém, podemos abordar com o K6:
 - Soak/Endurance Testing
 
 
-[Módulo] Mão na Massa
+[Módulo] Prática
 
 1. Ciclo de vida
 2. Realizando requisições HTTP

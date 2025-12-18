@@ -20,7 +20,7 @@ export default function () {
 
 export function handleSummary(data) {
     return {
-        "./MaoNaMassa/relatorios/01-example.html": htmlReport(data),
+        "./practice/relatorios/01-example.html": htmlReport(data),
     };
 }; 
 
