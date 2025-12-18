@@ -14,6 +14,6 @@ jobs:
         - name: Run k6 Testing
           uses: grafana/run-k6-action@v1
           with:
-            path: ./MaoNaMassa/git/github.js
+            path: ./MaoNaMassa/cloud/git/github.js
 
       
