@@ -16,7 +16,7 @@ jobs:
         - name: 03. Run k6 Testing
           uses: grafana/run-k6-action@v1
           with:
-            path: ./MaoNaMassa/cloud/git/github.js
+            path: ./practice/cloud/git/github.js
 
         - run: ls & mkdir report & mv index.html report 
           
