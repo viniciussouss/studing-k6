@@ -21,7 +21,7 @@ Load Testing é o principal, porém, podemos abordar com o K6:
     - Groups;
     - Variáveis de Ambiente;
 
-2. [Cenários]():
+2. [Cenários](https://github.com/viniciussouss/studing-k6/blob/main/practice/02-scenarios/scenarios.md):
     - Opções disponíveis;
     - Executores:
         - Por número de iterações;
