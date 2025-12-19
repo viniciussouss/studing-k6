@@ -1,5 +1,4 @@
 // Groups - São uma forma de organizar scripts.
-// O que é uma transação?
 
 //Ex:
 import http from 'k6/http';

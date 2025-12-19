@@ -8,7 +8,6 @@ export const options = {
 }
 
 // execução // codigo VU
-
 export default function() { 
     console.log('Hello World');
     sleep(1);
